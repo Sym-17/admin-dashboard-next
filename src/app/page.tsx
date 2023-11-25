@@ -9,12 +9,15 @@ import {
   CircleStackIcon,
 } from "@heroicons/react/24/solid";
 import { ClockIcon } from "@heroicons/react/24/outline";
+import BarChartOfWebsiteView from "../components/BarChartOfWebsiteView";
+import DailySalesChart from "@/components/DailySalesChart";
+import CompletedTasksChart from "@/components/CompletedTasksChart";
 
 export default function Home() {
   return (
     <main className="p-4 bg-slate-200 min-h-screen">
       <div className="flex gap-4">
-        <div className="w-72 flex flex-col p-3 bg-slate-900 rounded-lg gap-3">
+        <div className="w-72 flex flex-col p-3 bg-slate-800 rounded-lg gap-3">
           <header className="w-full text-white text-sm text-center p-5 border-b-2 border-b-gray-600">
             Admin DashBoard
           </header>
@@ -98,9 +101,11 @@ export default function Home() {
               <div className="">+55% than last week</div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-6 mt-10">
             <div className="flex flex-col p-4 bg-white rounded-lg">
-              <div className="text-center p-20">the chart</div>
+              <div className="w-full h-full mt-[-35px] mb-4">
+                <BarChartOfWebsiteView />
+              </div>
               <div className="flex flex-col mt-auto">
                 <div className="flex flex-col pb-4 border-b-2 border-b-gray-300">
                   <header className="font-bold">Website Views</header>
@@ -117,7 +122,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col p-4 bg-white rounded-lg">
-              <div className="text-center p-20">the chart</div>
+              <div className="w-full h-full mt-[-35px] mb-4">
+                <DailySalesChart />
+              </div>
               <div className="flex flex-col mt-auto">
                 <div className="flex flex-col pb-4 border-b-2 border-b-gray-300">
                   <header className="font-bold">Daily Sales</header>
@@ -132,7 +139,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col p-4 bg-white rounded-lg">
-              <div className="text-center p-20">the chart</div>
+              <div className="w-full h-full mt-[-35px] mb-4">
+                <CompletedTasksChart />
+              </div>
               <div className="flex flex-col mt-auto">
                 <div className="flex flex-col pb-4 border-b-2 border-b-gray-300">
                   <header className="font-bold">Completed Tasks</header>
